@@ -1,0 +1,51 @@
+[{
+	"name": 	"image-wrtnode",
+	"version": 	"0.1.0",
+	"path":		"image-wrtnode/openwrt-ramips-mt7620n-wrtnode-squashfs-sysupgrade.bin",
+	"hash":		"md5sums"
+},
+{
+	"name": 	"image-carambola",
+	"version": 	"0.2.0",
+	"path":		"image-carambola/carambola2-20150306.bin",
+	"hash":		"cb6cc44fc177a2ec14488af628e8dd16"
+},
+{
+	"name": 		"config-carambola",
+	"version": 	"0.1.0",
+	"files":		[
+					{
+					"name":		"wireless",
+					"version":	"0.1.0",
+					"path":		"config-carambola/etc/config/wireless"
+					},
+					{
+					"name":		"network",
+					"version":	"0.1.0",
+					"path":		"config-carambola/etc/config/network"
+					},
+					{
+					"name":		"dhcp",
+					"version":	"0.1.0",
+					"path":		"config-carambola/etc/config/dhcp"
+					}
+				]
+},
+{
+	"name": 		"ipk-wrtnode",
+	"version": 	"0.1.0",
+	"packages":	[
+				{
+					"name":		"nodejs",
+					"version":	"0.10.36",
+					"path":		"ipk-wrtnode/node_0.10.36-3_ramips_24kec.ipk"
+				},
+				{
+					"name":		"curl",
+					"version":	"7.38.0",
+					"path":		"ipk-wrtnode/curl_7.38.0-1_ramips_24kec.ipk"
+				}
+				]
+	
+}
+]
