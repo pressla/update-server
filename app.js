@@ -3,6 +3,12 @@ var Hapi = require('hapi');
 var Good = require('good');
 var fs = require('fs');
 
+var activevpn = {
+        mac:'',
+        vpn:'down'
+}
+
+
 //**** Server metrics pm2-> keymetrics
 var pmx = require('pmx');
 pmx.init();
@@ -40,11 +46,38 @@ server.route({
     method: 'GET',
     path:'/vpnrequest', 
     handler: function (request, reply) {
-	console.log(JSON.stringify(request.query));
-       reply('ok='+JSON.stringify(request.query));
+	var res = {mac:'2332323', vpn:'down'};
+	res.mac = request.query.mac;
+	
+	if (request.query.mac == activevpn.mac) {
+		res.mac = activevpn.mac;
+		res.vpn = activevpn.vpn;
+	}
+
+	console.log(JSON.stringify(res));
+        reply(JSON.stringify(res));
     }
 });
 
+server.route({
+    method: 'GET',
+    path:'/vpnconfigure',
+    handler: function (request, reply) {
+	var res = {mac:'???', vpn:'down', res:'ok'};
+
+	if (request.query.mac) {
+		activevpn.mac = request.query.mac;
+		activevpn.vpn = request.query.vpn;
+		res.mac = activevpn.mac;
+		res.vpn = activevpn.vpn;
+	} else {
+		res.res = 'bad request';
+	}
+
+       console.log(JSON.stringify(res));
+       reply(JSON.stringify(res));
+    }
+});
 
 // serve a read only repository for config files and firmware
 // TODO: use ssl and authentication to prevent theft. The trick must be that if someone hacks client he cannot get access to it either.

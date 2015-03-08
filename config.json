@@ -6,9 +6,9 @@
 },
 {
 	"name": 	"image-carambola",
-	"version": 	"0.2.0",
-	"path":		"image-carambola/carambola2-20150306.bin",
-	"hash":		"cb6cc44fc177a2ec14488af628e8dd16"
+	"version": 	"0.5.0",
+	"path":		"image-carambola/carambola2-20150308.bin",
+	"hash":		"837aa35bea07e76850259dbee36f75a7"
 },
 {
 	"name": 		"config-carambola",
