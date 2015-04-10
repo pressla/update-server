@@ -1,0 +1,15 @@
+[
+  {
+    "name": "image-wrtnode",
+    "version": "0.1.0",
+    "path": "image-wrtnode/openwrt-ramips-mt7620n-wrtnode-squashfs-sysupgrade.bin",
+    "hash": "md5sums"
+  },
+  {
+    "name": "image-carambola",
+    "path": "image-carambola/carambola2-e22cdfe4343183be702ee7e136225c8b-201504070620.bin",
+    "firmdesc": "Solved Firewall Routing for multicast and etc.",
+    "config": "config-carambola/config-55a91ee92a454f1e576ec451c82b040a-201504080049.tar.gz",
+    "configdesc": "buildconf"
+  }
+]
